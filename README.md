@@ -23,18 +23,22 @@ Simulador de un parque temático de dinosaurios desarrollado en Java como proyec
    mvn -version
 3. Configura los parámetros de simulación en src/main/resources/park.properties (opcional – los valores por defecto ya funcionan).
 
-    ▶ Ejecución del proyecto
-    Compilar
+▶ Ejecución del proyecto
+
+1. Compilar
     ```
     mvn compile
-    Ejecutar la simulación
+
+2. Ejecutar la simulación
     ```
     mvn exec:java
-    Ejecutar los tests y generar reporte de cobertura
+
+3. Ejecutar los tests y generar reporte de cobertura
     ```
     mvn clean test
     mvn jacoco:report
-    Abre target/site/jacoco/index.html en tu navegador para ver la cobertura.
+
+4. Abre target/site/jacoco/index.html en tu navegador para ver la cobertura.
 
 ## Explicación general del sistema
 El simulador avanza en pasos discretos (steps). En cada paso:
