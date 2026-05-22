@@ -1,0 +1,23 @@
+@startuml
+start
+:Leer configuración;
+:Inicializar parque (turistas, dinosaurios, zonas);
+:Crear EventScheduler con semilla fija;
+repeat
+  :Incrementar paso (step);
+  :Procesar llegadas (ArrivalZone);
+  :Mover turistas activos (CentralHub, BathroomZone, ObservationEnclosure);
+  :Aplicar ticks a BathroomZone y PowerPlant;
+  :Verificar evento programado;
+  if (¿Hay evento?) then (sí)
+    :Ejecutar evento (escape, apagón, tormenta);
+    :Registrar evento en CSV;
+  endif
+  :Trabajadores: guardias, técnicos;
+  :Pagar salarios y registrar gastos;
+  :Mostrar en el monitor;
+repeat while (¿Pasos restantes?) is (sí)
+->no;
+:Imprimir resumen final;
+stop
+@enduml

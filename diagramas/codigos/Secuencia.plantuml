@@ -1,0 +1,26 @@
+@startuml
+participant "SimulationEngine" as Engine
+participant "EventScheduler" as Scheduler
+participant "DinosaurEscapeEvent" as Event
+participant "ParkState" as State
+participant "Dinosaur" as Dino
+participant "Tourist" as Tourist
+participant "CsvWriter" as CSV
+
+Engine -> Scheduler: checkForEvent(step)
+Scheduler --> Engine: Optional<Event>
+Engine -> Event: execute(state, rng)
+Event -> State: getDinosaurs()
+State --> Event: List<Dinosaur>
+Event -> Dino: escape()
+Event -> State: getActiveTourists()
+State --> Event: List<Tourist>
+alt ataque ocurre
+    Event -> Tourist: setStatus(ATTACKED)
+    Event -> State: recordAttack(...)
+end
+Event --> Engine: (void)
+Engine -> Event: toRecord(step)
+Event --> Engine: EventRecord
+Engine -> CSV: appendEvent(record)
+@enduml
