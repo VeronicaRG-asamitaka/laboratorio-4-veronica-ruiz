@@ -27,7 +27,7 @@ public class DinosaurEscapeEvent implements SimulationEvent {
     @Override
     public void execute(ParkState state, Random rng) {
         
-        // 1. Elegir un dinosaurio que esté actualmente en encierro 
+        
 
         List<Dinosaur> enclosuredDinosaurs = state.getDinosaurs().stream()
                 .filter(d -> d.getStatus() == DinosaurStatus.IN_ENCLOSURE)
@@ -40,7 +40,7 @@ public class DinosaurEscapeEvent implements SimulationEvent {
         Dinosaur escaped = enclosuredDinosaurs.get(rng.nextInt(enclosuredDinosaurs.size()));
         escaped.escape();
 
-        // 2. Posible ataque a un turista según nivel de peligro
+        
         List<Tourist> activeTourists = state.getActiveTourists(); // IN_PARK
         if (!activeTourists.isEmpty() && rng.nextDouble() < escaped.getDangerLevel()) {
             Tourist victim = activeTourists.get(rng.nextInt(activeTourists.size()));
@@ -49,8 +49,7 @@ public class DinosaurEscapeEvent implements SimulationEvent {
             state.recordAttack(victim, escaped);
         }
 
-        // 3. Se registra el evento (se añade al CSV más adelante con toRecord)
-        // Nota: El Engine llamará a toRecord y luego a csvWriter.appendEvent
+        
     }
 
     @Override
