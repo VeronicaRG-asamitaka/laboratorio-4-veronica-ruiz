@@ -1,6 +1,8 @@
 step,eventName,description,affectedEntities,timestamp
-1779404864890,POWER_FAILURE,Planta eléctrica ha fallado,PowerPlant,2026-05-21T17:07:44.8907005
-1779404864977,POWER_FAILURE,Planta eléctrica ha fallado,PowerPlant,2026-05-21T17:07:44.9779756
-49,APAGON_MASIVO,Un apagón masivo deja la planta eléctrica inoperativa,Planta eléctrica,2026-05-21T17:07:44.9789782
-63,ESCAPE_DINOSAURIO,Un dinosaurio escapa de su encierro y puede atacar a turistas,Dinosaurio escapado,2026-05-21T17:07:45.0482986
-64,TORMENTA_TORRENCIAL,Una tormenta torrencial obliga a evacuar a los turistas,Todo el parque,2026-05-21T17:07:45.0542578
+1779911825969,POWER_FAILURE,Planta eléctrica ha fallado,PowerPlant,2026-05-27T13:57:05.9697669
+1779911826661,POWER_FAILURE,Planta eléctrica ha fallado,PowerPlant,2026-05-27T13:57:06.661997
+49,APAGON_MASIVO,Un apagón masivo deja la planta eléctrica inoperativa,Planta eléctrica,2026-05-27T13:57:06.661997
+1779911826870,POWER_FAILURE,Planta eléctrica ha fallado,PowerPlant,2026-05-27T13:57:06.8709023
+63,ESCAPE_DINOSAURIO,Un dinosaurio escapa de su encierro y puede atacar a turistas,Dinosaurio escapado,2026-05-27T13:57:06.9418975
+64,TORMENTA_TORRENCIAL,Una tormenta torrencial obliga a evacuar a los turistas,Todo el parque,2026-05-27T13:57:06.9590566
+1779911827387,POWER_FAILURE,Planta eléctrica ha fallado,PowerPlant,2026-05-27T13:57:07.3872011

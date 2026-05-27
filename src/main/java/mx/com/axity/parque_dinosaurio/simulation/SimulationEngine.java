@@ -147,6 +147,10 @@ public class SimulationEngine {
         enclosures.add(new ObservationEnclosure("Premium Enclosure", ExperienceType.PREMIUM));
         enclosures.add(new ObservationEnclosure("VIP Enclosure", ExperienceType.VIP));
 
+        for (Tourist t : tourists) {
+            arrivalZone.enter(t);
+        }
+
         // Estado
         state = new ParkState(tourists, dinosaurs, workers, arrivalZone, centralHub,
                 bathroomZone, powerPlant, enclosures, csvWriter, rng);
